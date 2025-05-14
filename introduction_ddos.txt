@@ -1,0 +1,88 @@
+INTRODUCTION AUX ATTAQUES DDoS
+============================
+
+1. QU'EST-CE QU'UNE ATTAQUE DDoS ?
+----------------------------------
+Une attaque DDoS (Distributed Denial of Service) est comme un embouteillage sur une autoroute, mais pour Internet. 
+Imaginez que des milliers de voitures (requêtes) arrivent en même temps sur une route (serveur), bloquant complètement la circulation.
+
+Exemple concret :
+- Un site web normalement capable de gérer 1000 visiteurs simultanés
+- Une attaque DDoS envoie 100 000 requêtes par seconde
+- Le serveur devient surchargé et ne peut plus répondre aux vrais utilisateurs
+
+2. DIFFÉRENCE ENTRE DoS ET DDoS
+------------------------------
+DoS (Denial of Service) :
+- Une seule source d'attaque
+- Plus facile à bloquer
+- Exemple : Un seul ordinateur qui envoie des milliers de requêtes
+
+DDoS (Distributed Denial of Service) :
+- Plusieurs sources d'attaque (botnet)
+- Plus difficile à bloquer
+- Exemple : Des milliers d'ordinateurs infectés qui attaquent ensemble
+
+3. TYPES D'ATTAQUES DDoS
+-----------------------
+a Attaques Volumétriques :
+   - Envoient une quantité massive de données pour saturer le réseau
+   - Exemple : Imaginez que vous recevez 1000 lettres par seconde dans votre boîte aux lettres
+   - Comme essayer de boire l'eau d'un tuyau d'incendie avec une paille
+
+b Attaques Applicatives :
+   - Ciblent les applications web
+   - Exemple : Envoi de milliers de requêtes de connexion à une base de données
+   - Comme demander à un serveur de calculer des opérations complexes en boucle
+
+c Attaques de Protocole :
+   - Trompent le système en lui faisant croire qu'il y a beaucoup de connexions en attente
+   - Exemple : Comme si quelqu'un réservait toutes les places d'un cinéma mais ne venait jamais
+   - Comme appeler un restaurant et garder la ligne occupée sans jamais passer commande
+
+COMMENT SE PROTÉGER ?
+-----------------------
+1. Utiliser des solutions anti-DDoS
+   - Ce sont des services spécialisés qui filtrent le trafic malveillant
+   - Exemple : Cloudflare, Akamai, ou AWS Shield
+   - Comme avoir un videur à l'entrée d'une boîte de nuit qui vérifie qui peut entrer
+   - Ces services peuvent absorber des attaques de plusieurs Tbps
+
+2. Mettre en place des limites de taux (rate limiting)
+   - Limite le nombre de requêtes qu'un utilisateur peut faire
+   - Exemple : Maximum 100 requêtes par minute par adresse IP
+   - Comme limiter le nombre de cartes de crédit qu'une personne peut utiliser
+   - Empêche un seul utilisateur de surcharger le système
+
+3. Utiliser un CDN (Content Delivery Network)
+   - Répartit le contenu sur plusieurs serveurs dans le monde
+   - Exemple : Au lieu d'avoir un seul serveur à Paris, le contenu est copié sur des serveurs à New York, Tokyo, etc.
+   - Comme avoir plusieurs magasins d'une même chaîne au lieu d'un seul grand magasin
+   - Si un serveur est attaqué, les autres continuent de fonctionner
+
+4. Avoir un plan de réponse aux incidents
+   - Document qui explique quoi faire en cas d'attaque
+   - Exemple : Qui appeler, quelles actions prendre, comment communiquer
+   - Comme avoir un plan d'évacuation en cas d'incendie
+   - Permet de réagir rapidement et efficacement
+
+5. Surveiller le trafic réseau
+   - Observer en temps réel le trafic qui arrive sur les serveurs
+   - Exemple : Détecter une augmentation soudaine du nombre de requêtes
+   - Comme avoir des caméras de surveillance dans un magasin
+   - Permet de détecter une attaque avant qu'elle ne fasse trop de dégâts
+
+Exemple concret de protection :
+------------------------------
+Imaginez un site de e-commerce :
+1. Le CDN distribue les images et le contenu statique
+2. Le rate limiting empêche un bot de faire 1000 commandes par seconde
+3. La solution anti-DDoS filtre le trafic malveillant
+4. La surveillance détecte une augmentation anormale du trafic
+5. Le plan de réponse est activé pour protéger le site
+
+Rappel Important :
+-----------------
+Les attaques DDoS sont illégales et peuvent avoir des conséquences graves. 
+Ces informations sont fournies uniquement à des fins éducatives pour comprendre 
+comment protéger les systèmes contre de telles attaques. 
